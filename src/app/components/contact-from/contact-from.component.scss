@@ -1,0 +1,80 @@
+.container-form {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .header {
+    font-size: 26px;
+    font-weight: 500x;
+  }
+  .form {
+    .input-container {
+      gap: 20px;
+    }
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    .big-button {
+      background-color: #e3597d;
+      height: 50px !important;
+    }
+    textarea {
+      height: 100px !important;
+      resize: none;
+    }
+    ::ng-deep {
+      /* Change the border color */
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+        .mdc-notched-outline__leading,
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+        .mdc-notched-outline__notch,
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+        .mdc-notched-outline__trailing {
+        border-color: var(--borderNotFocus) !important;
+      }
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+        .mdc-notched-outline__leading,
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+        .mdc-notched-outline__notch,
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled)
+        .mdc-notched-outline__trailing {
+        border-color: var(--borderNotFocus) !important;
+      }
+      /* Change the border color in focus */
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled):hover
+        .mdc-notched-outline__leading,
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled):hover
+        .mdc-notched-outline__notch,
+      .mdc-text-field--outlined:not(.mdc-text-field--disabled):hover
+        .mdc-notched-outline__trailing {
+        border-color: var(--borderColor) !important;
+      }
+      .mdc-text-field--outlined:not(
+          .mdc-text-field--disabled
+        ).mdc-text-field--focused
+        .mdc-notched-outline__leading,
+      .mdc-text-field--outlined:not(
+          .mdc-text-field--disabled
+        ).mdc-text-field--focused
+        .mdc-notched-outline__notch,
+      .mdc-text-field--outlined:not(.mdc-text-field--).mdc-text-field--focused
+        .mdc-notched-outline__trailing {
+        border-color: var(--borderColor) !important;
+        border-width: 2px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .container-form {
+    .form {
+      .input-container {
+        gap: 0px;
+      }
+    }
+    .input {
+      width: 100%;
+    }
+  }
+}

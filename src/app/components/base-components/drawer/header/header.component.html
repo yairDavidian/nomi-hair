@@ -1,0 +1,15 @@
+<div class="container-header d-flex justify-content-between align-items-center">
+  <ng-content />
+  <div class="menu d-flex gap-5">
+    @for (item of menu; track $index) {
+    <div
+      (click)="clickItem(item.url, item.id)"
+      class="item"
+      [ngClass]="{ selected: item.id === itemSelected() }"
+    >
+      {{ item.label }}
+    </div>
+    }
+  </div>
+  <div class="name px-4">NOMI HAIR</div>
+</div>

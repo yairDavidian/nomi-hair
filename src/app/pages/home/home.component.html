@@ -1,0 +1,62 @@
+<div class="container-title d-flex flex-column gap-3">
+  <div class="header d-flex flex-column">
+    <div>האופנה והסגנון שלך</div>
+    <div>מתחילים כאן</div>
+  </div>
+  <div class="sub-header">
+    יופי הוא אכן מתנה טובה , אך כדי שהטוב הזה יישמר הגעתם למקום הנכון
+  </div>
+</div>
+<div
+  class="d-flex flex-column justify-content-center align-items-center py-5 gap-5"
+>
+  <div class="d-flex justify-content-center">
+    <div class="my-courses">הקורסים שלי</div>
+  </div>
+  <div class="courses d-flex gap-5 flex-wrap justify-content-center">
+    @for (course of courses; track $index) {
+    <app-box-image [item]="course" />
+    }
+  </div>
+  <div class="d-flex gap-1 align-items-end">
+    <div class="to-gallery">לעמוד הקורסים</div>
+  </div>
+</div>
+<div
+  class="gallery-container d-flex flex-column justify-content-center align-items-center py-5 gap-5"
+>
+  <div class="d-flex justify-content-center">
+    <div class="my-courses">הצצה לגלריה</div>
+  </div>
+  <div class="d-flex gap-5 flex-wrap justify-content-center">
+    @for (i of array; track $index ; let last = $last ; let first = $first) {
+    <div
+      class="container-image d-flex align-items-center"
+      [ngClass]="{ 'justify-content-end': last }"
+      [style.backgroundImage]="
+        'url(assets/images/gallery/' + ($index + 1 + counter) + '.jpeg)'
+      "
+    >
+      @if(counter > 0 && first){
+      <mat-icon
+        fontIcon="arrow_forward_ios"
+        class="arrow arrow-right"
+        (click)="counter = counter - 5"
+      />
+      } @if(counter < 10 && last ){
+
+      <mat-icon
+        fontIcon="arrow_back_ios"
+        class="arrow"
+        (click)="counter = counter + 5"
+      />
+      }
+    </div>
+    }
+  </div>
+  <div class="d-flex gap-1 align-items-end">
+    <div class="to-gallery">לעמוד הגלריה</div>
+  </div>
+</div>
+<app-contact-from />
+<app-footer />

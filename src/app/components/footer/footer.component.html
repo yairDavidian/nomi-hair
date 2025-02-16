@@ -1,0 +1,11 @@
+<div class="container-footer d-flex flex-wrap">
+  @for (item of list; track $index) {
+  <div class="d-flex flex-column gap-2">
+    <div class="header">{{ item.title }}</div>
+    @for (subItem of item.items; track $index) {
+
+    <div class="sub-header">{{ subItem.title }}</div>
+    }
+  </div>
+  }
+</div>

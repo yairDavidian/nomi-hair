@@ -1,0 +1,21 @@
+.example-container {
+  //   width: 500px;
+  //   margin-top: 50px;
+  height: calc(100vh);
+}
+.icon {
+  cursor: pointer;
+  align-self: center;
+}
+.example-sidenav-content {
+  //   display: flex;
+  // background-color: #ff86a1;
+  min-height: calc(100vh);
+  //   align-items: center;
+  //   justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+  width: 100%;
+}

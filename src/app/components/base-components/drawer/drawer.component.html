@@ -1,0 +1,20 @@
+<app-header>
+  <mat-icon class="icon" i fontIcon="menu" (click)="drawer.toggle()">
+    Toggle sidenav
+  </mat-icon>
+</app-header>
+<mat-drawer-container dir="rtl" class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    @if (showFiller) {
+    <p>Lorem, ipsum dolor sit amet consectetur.</p>
+    }
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <ng-content />
+  </div>
+</mat-drawer-container>

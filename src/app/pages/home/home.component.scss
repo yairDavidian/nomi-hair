@@ -1,0 +1,81 @@
+.container-title {
+  min-height: 400px;
+  background-image: url("../../../assets/images/bg1.jpg");
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  .header {
+    color: #e3597d;
+    font-size: 58px;
+    font-weight: 800;
+    font-family: Heebo;
+    line-height: normal;
+    text-align: center;
+  }
+  .sub-header {
+    color: #ffffff;
+    font-size: 22px;
+    //   width: 50%;
+  }
+}
+.my-courses {
+  font-size: 36px;
+  font-weight: 800;
+}
+.container-image {
+  width: 250px;
+  height: 280px;
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  border-radius: 8px;
+}
+.arrow {
+  position: relative;
+  left: -45px;
+  height: 40px !important;
+  width: 40px !important;
+  font-size: 40px;
+  color: #000000;
+  &:hover {
+    cursor: pointer;
+    // border-radius: 100px;
+    // box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Elevated elevation */
+  }
+}
+.gallery-container {
+  background-color: #e3597d;
+
+  // border-radius: 10px;
+  // margin: 0px 0px;
+}
+.to-gallery {
+  // font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.arrow-right {
+  right: -45px;
+}
+
+@media screen and (max-width: 800px) {
+  .container-title {
+    .header {
+      font-size: 36px;
+    }
+    .sub-header {
+      color: #ffffff;
+      font-size: 14px;
+      padding-inline: 15px;
+      line-height: normal;
+      text-align: center;
+    }
+  }
+  .arrow {
+    display: none;
+  }
+}

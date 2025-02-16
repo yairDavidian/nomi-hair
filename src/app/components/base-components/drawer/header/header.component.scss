@@ -1,0 +1,39 @@
+.container-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  z-index: 1000;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.02);
+  .name {
+    color: palevioletred;
+    font-size: 24px;
+  }
+  .item {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  .selected {
+    color: palevioletred;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .item:hover {
+    color: palevioletred;
+    cursor: pointer;
+  }
+  .menu {
+  }
+}
+@media screen and (max-width: 800px) {
+  .container-header {
+    .menu {
+      display: none !important;
+    }
+    .name {
+      font-size: 16px;
+    }
+  }
+}

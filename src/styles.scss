@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.css";
+
+body {
+  font-family: "Heebo", sans-serif !important;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url("assets/fonts/static/Heebo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("assets/fonts/static/Heebo-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+//style scrollbar
+::-webkit-scrollbar {
+  position: absolute;
+  left: 0; /* Position the scrollbar on the left of the element */
+  width: 5px;
+  height: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  position: absolute;
+  left: 0; /* Position the scrollbar on the left of the element */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  position: absolute;
+  left: 0; /* Position the scrollbar on the left of the element */
+  background-color: #ff86a0a4;
+  border-radius: 8px;
+}
